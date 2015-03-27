@@ -23,3 +23,6 @@ while True:
     filepath = root.directory + "/" + str(n) + "-" + d_string + ".jpg"
     img.save(filepath)
     n += 5
+
+
+print "wn, te dai cuenta que no tenis nada documentadooooooo"   
