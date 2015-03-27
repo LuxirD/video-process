@@ -4,6 +4,9 @@ from Tkinter import Tk
 from tkFileDialog import askopenfilename
 from tkFileDialog import askdirectory
 
+from time import sleep
+
+
 root = Tk()
 root.fileName = askopenfilename(filetypes=[("AVI files", "*.avi")])
 root.directory = askdirectory()
@@ -11,6 +14,7 @@ fmt = '%Y-%m-%d-%H_%M_%S'
 vir = VirtualCamera(root.fileName, "video")
 n = 1
 while True:
+    sleep(0.05)
     img = vir.getFrame(n).resize(320, 240)
     invr = img.invert()
     bine = invr.binarize(80)
